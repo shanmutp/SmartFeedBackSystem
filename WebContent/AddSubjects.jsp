@@ -82,9 +82,7 @@
 %>
 <script>
 	function setSelected(select_id, value) {
-		//alert(value);
 		 if (value != null) {
-			//alert("value not null*");
 			 var mySelect = document.getElementById(select_id);
 				mySelect.value = value;
 			
