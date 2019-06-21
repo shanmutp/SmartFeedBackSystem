@@ -185,7 +185,7 @@
 									<td><%=s.getSpecializationName()%></td>
 									<td><%=s.getSubjectName()%></td>
 									<td><a  class="btn btn-default btn-sm" href="SubjectFetchForEdit?id=<%=s.getSubjectId()%>">
-											<span class="glyphicon glyphicon-pencil"></span>
+											<span class="glyphicon glyphicon-pencil"> Edit</span>
 										</a></td>
 								</tr>
 								<%
