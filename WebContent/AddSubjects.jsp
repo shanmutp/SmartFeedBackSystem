@@ -211,8 +211,8 @@
 								%>
 
 								<%
-									Map<Integer, String> specMap = (Map<Integer,String>) application.getAttribute("specialization");
-									Map<Integer, String> courseMap = (Map<Integer,String>) application.getAttribute("course");
+									Map<Integer, String> specMap = (Map<Integer, String>) application.getAttribute("specialization");
+									Map<Integer, String> courseMap = (Map<Integer, String>) application.getAttribute("course");
 								%>
 								<form action="AddSubject" method="post">
 									<div class="row form-group">
@@ -221,10 +221,14 @@
 											Course Name : <select name="courseName" id="courseID">
 
 												<option value="0">----Select----</option>
-												<%Set<Integer> keys = courseMap.keySet();
-												for(Integer key:keys){ %>
-												<option value=<%=key %>><%=courseMap.get(key)%></option>
-												<%} %>
+												<%
+													Set<Integer> keys = courseMap.keySet();
+													for (Integer key : keys) {
+												%>
+												<option value=<%=key%>><%=courseMap.get(key)%></option>
+												<%
+													}
+												%>
 											</select>
 										</div>
 									</div>
@@ -236,10 +240,14 @@
 											Specialization Name : <select name="specializationName"
 												id="specializationId">
 												<option value="0">--------Select--------</option>
-												<%Set<Integer> keys1 = specMap.keySet();
-												for(Integer key:keys1){ %>
-												<option value=<%=key %>><%=specMap.get(key)%></option>
-												<%} %>
+												<%
+													Set<Integer> keys1 = specMap.keySet();
+													for (Integer key : keys1) {
+												%>
+												<option value=<%=key%>><%=specMap.get(key)%></option>
+												<%
+													}
+												%>
 											</select>
 										</div>
 									</div>
@@ -250,11 +258,16 @@
 												class="form-control" placeholder="Subject">
 										</div>
 									</div>
+									<%
+										if (vo == null) {
+									%>
 									<div class="form-group">
 										<input type="submit" value="Add Subject"
 											class="btn btn-primary">
 									</div>
-
+									<%
+										}
+									%>
 
 								</form>
 							</fieldset>
