@@ -35,7 +35,6 @@ public class EditSubject extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		String specializationName = request.getParameter("specializationName");
 		String subjectName = request.getParameter("subjectName");
 		int specializationId = Integer.parseInt(request.getParameter("specializationName"));
 		int subjectId = new Integer(request.getParameter("subjectId"));

@@ -39,6 +39,7 @@ public class SubjectFetchForEdit extends HttpServlet {
 		SearchSubjectVO vo = service.fetchSubject(new Integer(id));
 		System.out.println("vo---->"+vo);
 		request.setAttribute("subjectVO", vo);
+		
 		RequestDispatcher successDispatcher = request.getRequestDispatcher("SubjectUpdate.jsp");
 		successDispatcher.forward(request, response);
 	
