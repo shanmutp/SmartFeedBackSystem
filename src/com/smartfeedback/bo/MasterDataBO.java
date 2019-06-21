@@ -3,7 +3,7 @@ package com.smartfeedback.bo;
 import java.util.Map;
 
 import com.smartfeedback.dao.MasterDataDAO;
-
+//Adding comments for checking into Git hub
 public class MasterDataBO {
 
 	public Map<Integer, String> fetchSpecialization() {
