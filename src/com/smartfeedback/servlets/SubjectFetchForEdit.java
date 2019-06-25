@@ -40,7 +40,7 @@ public class SubjectFetchForEdit extends HttpServlet {
 		System.out.println("vo---->"+vo);
 		request.setAttribute("subjectVO", vo);
 		
-		RequestDispatcher successDispatcher = request.getRequestDispatcher("/Subject/SubjectUpdate.jsp");
+		RequestDispatcher successDispatcher = request.getRequestDispatcher("SubjectUpdate.jsp");
 		successDispatcher.forward(request, response);
 	
 	}

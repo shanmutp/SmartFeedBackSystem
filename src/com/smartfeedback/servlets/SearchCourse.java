@@ -51,7 +51,7 @@ public class SearchCourse extends HttpServlet {
 		CourseService service = new CourseService();
 		List<CourseVO> list = service.fetchCourses(courseName);
 		request.setAttribute("courseList", list);
-		RequestDispatcher successDispatcher = request.getRequestDispatcher("/Course/CourseList.jsp");
+		RequestDispatcher successDispatcher = request.getRequestDispatcher("CourseList.jsp");
 		successDispatcher.forward(request, response);
 
 	}

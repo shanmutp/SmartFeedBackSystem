@@ -40,7 +40,7 @@ public class CourseFetchForEdit extends HttpServlet {
 		System.out.println("vo---->"+vo);
 		request.setAttribute("courseVO", vo);
 		
-		RequestDispatcher successDispatcher = request.getRequestDispatcher("/Course/CourseUpdate.jsp");
+		RequestDispatcher successDispatcher = request.getRequestDispatcher("CourseUpdate.jsp");
 		successDispatcher.forward(request, response);
 	}
 

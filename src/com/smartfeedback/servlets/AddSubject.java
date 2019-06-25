@@ -52,7 +52,7 @@ public class AddSubject extends HttpServlet {
 		SubjectService service = new SubjectService();
 		service.addSubject(vo);
 		request.setAttribute("vo", vo);
-		RequestDispatcher successDispatcher = request.getRequestDispatcher("/Subject/AddSubjects.jsp");
+		RequestDispatcher successDispatcher = request.getRequestDispatcher("AddSubjects.jsp");
 		successDispatcher.forward(request, response);
 
 	}

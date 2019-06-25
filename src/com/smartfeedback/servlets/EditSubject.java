@@ -48,7 +48,7 @@ public class EditSubject extends HttpServlet {
 		SubjectService service = new SubjectService();
 		service.updateSubject(vo);
 		request.setAttribute("vo", vo);
-		RequestDispatcher successDispatcher = request.getRequestDispatcher("/Subject/SubjectUpdate.jsp");
+		RequestDispatcher successDispatcher = request.getRequestDispatcher("SubjectUpdate.jsp");
 		successDispatcher.forward(request, response);
 	}
 

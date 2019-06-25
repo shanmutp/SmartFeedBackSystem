@@ -43,7 +43,7 @@ public class SearchSubject extends HttpServlet {
 		SubjectService service = new SubjectService();
 		List<SearchSubjectVO> list = service.fetchSubject(subjectName);
 		request.setAttribute("subjectList", list);
-		RequestDispatcher successDispatcher = request.getRequestDispatcher("/Subject/SubjectList.jsp");
+		RequestDispatcher successDispatcher = request.getRequestDispatcher("SubjectList.jsp");
 		successDispatcher.forward(request, response);
 
 	}
