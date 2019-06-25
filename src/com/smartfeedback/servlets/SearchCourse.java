@@ -47,12 +47,11 @@ public class SearchCourse extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
 		String courseName = request.getParameter("courseName");
 		CourseService service = new CourseService();
 		List<CourseVO> list = service.fetchCourses(courseName);
 		request.setAttribute("courseList", list);
-		RequestDispatcher successDispatcher = request.getRequestDispatcher("courseList.jsp");
+		RequestDispatcher successDispatcher = request.getRequestDispatcher("CourseList.jsp");
 		successDispatcher.forward(request, response);
 
 	}

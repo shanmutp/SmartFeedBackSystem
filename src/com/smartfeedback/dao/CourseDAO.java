@@ -65,8 +65,8 @@ public class CourseDAO {
 			myconn = DriverManager.getConnection("jdbc:mysql://localhost:3306/smartfeedback", "root", "root123");
 			System.out.println("db connection" + myconn);
 			myst = myconn.createStatement();
-			PreparedStatement ps = myconn
-					.prepareStatement("select course_id,course_name,course_description FROM course like ?");
+			PreparedStatement ps = myconn.prepareStatement(
+					"select course_id,course_name,course_description FROM course where course_name like ?");
 			String clause = "%" + name + "%";
 			System.out.println("Clause=" + clause);
 			ps.setString(1, clause);

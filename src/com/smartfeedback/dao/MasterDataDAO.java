@@ -24,7 +24,7 @@ public class MasterDataDAO {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 
-			myconn = DriverManager.getConnection("jdbc:mysql://localhost:3306/smart", "root", "password");
+			myconn = DriverManager.getConnection("jdbc:mysql://localhost:3306/smartfeedback", "root", "root123");
 			System.out.println("db connection" + myconn);
 			myst = myconn.createStatement();
 			PreparedStatement ps = myconn
@@ -62,7 +62,7 @@ public class MasterDataDAO {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 
-			myconn = DriverManager.getConnection("jdbc:mysql://localhost:3306/smart", "root", "password");
+			myconn = DriverManager.getConnection("jdbc:mysql://localhost:3306/smartfeedback", "root", "root123");
 			System.out.println("db connection" + myconn);
 			myst = myconn.createStatement();
 			PreparedStatement ps = myconn
