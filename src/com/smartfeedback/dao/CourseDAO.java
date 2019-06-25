@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.smartfeedback.vo.CourseVO;
+import com.smartfeedback.vo.SubjectVO;
 import com.smartfeedback.vo.CourseVO;
 
 public class CourseDAO {
@@ -140,5 +141,43 @@ public class CourseDAO {
 			}
 		}
 		return vo;
+	}
+	
+	public void updateCourse(CourseVO vo) {
+		// insert into DB
+		Connection myconn = null;
+		Statement myst = null;
+		ResultSet myrs = null;
+
+		try {
+			System.out.println("Trying to laod driver ************************");
+			Class.forName("com.mysql.jdbc.Driver");
+
+			myconn = DriverManager.getConnection("jdbc:mysql://localhost:3306/smartfeedback", "root", "root123");
+			System.out.println("db connection" + myconn);
+			myst = myconn.createStatement();
+			PreparedStatement ps = myconn
+					.prepareStatement("update course set course_name = ? ,course_description =? where course_id=?");
+			ps.setString(1, vo.getCourseName());
+			ps.setString(2, vo.getCourseDescription());
+			ps.setInt(3, vo.getCourseID());
+			ps.executeUpdate();
+		} catch (Exception exc) {
+			exc.printStackTrace();
+		} finally {
+			try {
+				if (myrs != null) {
+					myrs.close();
+				}
+				if (myst != null) {
+					myst.close();
+				}
+				if (myconn != null) {
+					myconn.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 }

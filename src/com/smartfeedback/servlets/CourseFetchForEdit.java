@@ -38,7 +38,7 @@ public class CourseFetchForEdit extends HttpServlet {
 		CourseService service = new CourseService();
 		CourseVO vo = service.fetchCourse(new Integer(id));
 		System.out.println("vo---->"+vo);
-		request.setAttribute("CourseVO", vo);
+		request.setAttribute("courseVO", vo);
 		
 		RequestDispatcher successDispatcher = request.getRequestDispatcher("CourseUpdate.jsp");
 		successDispatcher.forward(request, response);
