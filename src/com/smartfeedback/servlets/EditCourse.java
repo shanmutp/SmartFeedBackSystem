@@ -51,7 +51,7 @@ public class EditCourse extends HttpServlet {
 		CourseService service = new CourseService();
 		service.updateCourse(vo);
 		request.setAttribute("vo", vo);
-		RequestDispatcher successDispatcher = request.getRequestDispatcher("CourseUpdate.jsp");
+		RequestDispatcher successDispatcher = request.getRequestDispatcher("/Course/CourseUpdate.jsp");
 		successDispatcher.forward(request, response);
 	}
 

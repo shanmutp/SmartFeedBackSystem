@@ -49,7 +49,7 @@ public class DisplayCourse extends HttpServlet {
 		CourseService service = new CourseService();
 		List<CourseVO> list = service.fetchCourses(courseName);
 		request.setAttribute("courseList", list);
-		RequestDispatcher successDispatcher = request.getRequestDispatcher("courseList.jsp");
+		RequestDispatcher successDispatcher = request.getRequestDispatcher("/Course/courseList.jsp");
 		successDispatcher.forward(request, response);
 
 	}
